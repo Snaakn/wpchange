@@ -20,7 +20,7 @@ class WpApp
 
   end
 
-  # TODO check theme witch wallpaper should be loaded
+  # check theme witch wallpaper should be loaded
   def checkWall
     path = @path + "/themes/" + loadconf + '/'
     t = Time.now
@@ -43,7 +43,7 @@ class WpApp
     setwall @wp
   end
 
-  # TODO load change wallpaper
+  # change wallpaper from given path
   def setwall path
     cmd = "gsettings set org.gnome.desktop.background picture-uri file:///" + path
     puts cmd
@@ -65,8 +65,6 @@ class WpApp
     #TODO call load config
 end
 
-# TODO filechooser for theme
-
 def quitall
   [tcheck, traythread].each { |t| Thread.kill t}
   Gtk.main_quit
@@ -74,8 +72,6 @@ end
 
 
 
-# Making tray icon and menu
-#----------------------------------------------------------------------------
 
 Dir.chdir(File.join(File.expand_path(File.dirname __FILE__), "/themes"))
 files = Dir.glob('*')
@@ -91,6 +87,9 @@ tcheck = Thread.new {
 }
 
 
+# Making tray icon and menu
+#----------------------------------------------------------------------------
+
 si        = Gtk::StatusIcon.new
 si.pixbuf = GdkPixbuf::Pixbuf.new(:file => File.join(File.expand_path(File.dirname __FILE__), 'wpchange.svg'))
 #si.stock = Gtk::Stock::DIALOG_INFO
@@ -99,6 +98,7 @@ si.tooltip_text = "Hello"
 themelist = Array.new
 i = 0
 menu=Gtk::Menu.new
+
 # create menu items for themes in themes directory
 files.each do | theme |
   themelist[i]=Gtk::ImageMenuItem.new(:label => "#{theme}", :mnemonic => nil, :stock_id => nil, :accel_group => nil)
