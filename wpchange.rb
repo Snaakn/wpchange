@@ -59,10 +59,7 @@ class WpApp
     puts 'theme changed'
     checkWall
   end
-    # time1 = Time.now
-    # puts "Current time: " + time1.strftime('%H') + ":" + time1.strftime('%M')
 
-    #TODO call load config
 end
 
 def quitall
