@@ -104,8 +104,6 @@ files.each do | theme |
   themelist[i]=Gtk::ImageMenuItem.new(:label => "#{theme}", :mnemonic => nil, :stock_id => nil, :accel_group => nil)
   menu.append(themelist[i])
   themelist[i].signal_connect('activate'){app.changetheme theme}
-
-
   i += 1
 end
 
