@@ -1,0 +1,20 @@
+---
+  #usage:
+  #time : wallpaper.filetype
+  # I have not tried using 12-hour cycle but 24h definitely works
+  # don't be stupid there is no time like 25:61
+
+  #wallpaper1
+  '0:00' : 'night.svg'
+  #wallpaper2
+  '5:00' : 'sunrise.svg'
+  #wallpaper3
+  '8:00' : 'day.svg'
+  #wallpaper4
+  '13:00' : 'highnoon.svg'
+  #wallpaper5
+  '16:30' : 'sunset.svg'
+  #wallpaper6
+  '20:00' : 'night.svg'
+  #wallpaper7
+  '22:00' : 'moonlight.svg'

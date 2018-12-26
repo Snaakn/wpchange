@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?> <!-- Created with Vectornator Pro for iOS (http://vectornator.io/) --><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg height="100%" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="100%" xmlns:vectornator="http://vectornator.io" version="1.1" viewBox="0 0 64 64">
+<metadata>
+<vectornator:setting key="RulersVisible" value="1"/>
+<vectornator:setting key="SnapToEdges" value="0"/>
+<vectornator:setting key="Units" value="Pixels"/>
+<vectornator:setting key="DynamicGuides" value="0"/>
+<vectornator:setting key="SnapToPoints" value="0"/>
+<vectornator:setting key="SnapToGrid" value="0"/>
+<vectornator:setting key="ShowGrid" value="1"/>
+<vectornator:setting key="GridSpacing" value="36"/>
+</metadata>
+<defs/>
+<g id="Ebene 1" vectornator:layerName="Ebene 1">
+<path stroke="#fcf9f2" stroke-width="8.39" d="M4.63682+31.8989C4.63682+17.0954+16.54+5.09475+31.2234+5.09475C45.9067+5.09475+58.2663+17.3469+58.2663+32.1504C58.2663+46.9539+45.9067+58.703+31.2234+58.703C16.54+58.703+4.63682+46.7024+4.63682+31.8989Z" fill="none" stroke-linecap="round" opacity="1" stroke-linejoin="round"/>
+<path stroke="#fcf9f2" stroke-width="8.39" d="M8.53286+44.6823C12.0488+46.1799+25.0058+35.4366+25.0058+35.4366C25.0058+35.4366+34.1864+37.8457+38.1582+35.1111C42.1299+32.3764+47.9248+47.8728+55.2172+43.3801" fill="none" stroke-linecap="round" opacity="1" stroke-linejoin="round"/>
+<path stroke="#fcf9f2" stroke-width="1.29" d="M39.5255+38.4968C39.5255+38.4968+40.1766+41.8175+31.0611+43.2499C21.9457+44.6823+23.8339+45.5939+28.0009+46.7008C32.168+47.8076+45.8412+47.0263+36.4002+50.2818C26.9592+53.5374+23.2456+52.676+28.4567+55.5558" fill="none" stroke-linecap="round" opacity="1" stroke-linejoin="round"/>
+<path stroke="#fcf9f2" stroke-width="0.85" d="M25.3005+30.5634" fill="none" stroke-linecap="round" opacity="1" stroke-linejoin="round"/>
+<path stroke="#fcf9f2" stroke-width="2.73" d="M25.5613+6.29695C25.5613+6.29695+32.829-0.097391+38.121+5.935C38.121+5.935+47.4349+4.36658+45.9532+10.4593C45.9532+10.4593+49.1284+16.3107+41.2962+16.1297C41.2962+16.1297+39.7682+18.4091+36.7403+19.3078C34.3274+20.0241+30.7141+19.8636+27.9603+16.9743C27.9603+16.9743+24.2047+19.1079+20.9749+18.8443C16.9297+18.5142+13.1291+15.4152+16.3179+13.2342C17.3763+12.5103+15.8715+10.6584+18.5758+8.77023C22.8094+5.81435+23.8525+7.9088+25.5613+6.29695Z" fill="none" stroke-linecap="round" opacity="1" stroke-linejoin="round"/>
+</g>
+</svg>
