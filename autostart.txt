@@ -1,1 +1,3 @@
+# you can use this command i.e in ubuntus "startup applications" to start the app when you login 
+
 bash --login -c "path/to/wpchange.rb  &! exit"
