@@ -2,15 +2,18 @@
 require 'yaml'
 require 'gtk3'
 
+$path = File.expand_path(File.dirname __FILE__)
+load File.join($path, 'ui.rb')
+
+
 class WpApp
   def initialize
-    @path = File.expand_path(File.dirname __FILE__)
   end
 
   # load config to load theme
   def loadconf
 
-    @conf = YAML.load_file(File.join(@path, "config.yaml"))
+    @conf = YAML.load_file(File.join($path, "config.yaml"))
     return @conf['theme']
   end
 
@@ -22,7 +25,7 @@ class WpApp
 
   # check theme witch wallpaper should be loaded
   def checkWall
-    path = @path + "/themes/" + loadconf + '/'
+    path = $path + "/themes/" + loadconf + '/'
     t = Time.now
     # convert timestring to int such that the highest 4 digit number is 2359
     # now it it easy to check instead of checking hours and minutes seperately
@@ -55,23 +58,14 @@ class WpApp
     puts @conf
     @conf['theme'] = selected
     puts @conf
-    File.write(@path + '/config.yaml', @conf.to_yaml)
+    File.write($path + '/config.yaml', @conf.to_yaml)
     puts 'theme changed'
     checkWall
   end
 
 end
 
-def quitall
-  [tcheck, traythread].each { |t| Thread.kill t}
-  Gtk.main_quit
-end
 
-
-
-
-Dir.chdir(File.join(File.expand_path(File.dirname __FILE__), "/themes"))
-files = Dir.glob('*')
 
 app = WpApp.new
 
@@ -87,30 +81,8 @@ tcheck = Thread.new {
 # Making tray icon and menu
 #----------------------------------------------------------------------------
 
-si        = Gtk::StatusIcon.new
-si.pixbuf = GdkPixbuf::Pixbuf.new(:file => File.join(File.expand_path(File.dirname __FILE__), 'wpchange.svg'))
-#si.stock = Gtk::Stock::DIALOG_INFO
-si.tooltip_text = "Hello"
 
-themelist = Array.new
-i = 0
-menu=Gtk::Menu.new
+ui = UI.new app
+ui.show
 
-# create menu items for themes in themes directory
-files.each do | theme |
-  themelist[i]=Gtk::ImageMenuItem.new(:label => "#{theme}", :mnemonic => nil, :stock_id => nil, :accel_group => nil)
-  menu.append(themelist[i])
-  themelist[i].signal_connect('activate'){app.changetheme theme}
-  i += 1
-end
-
-quit=Gtk::ImageMenuItem.new(:label => 'QUIT', :mnemonic => nil, :stock_id => nil, :accel_group => nil)
-quit.signal_connect('activate'){quitall}
-menu.append(Gtk::SeparatorMenuItem.new)
-menu.append(quit)
-menu.show_all
-si.signal_connect('popup-menu'){|tray, button, time| menu.popup(nil, nil, button, time)}
-
-
-Gtk.main
 tcheck.join
