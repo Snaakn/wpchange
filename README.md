@@ -10,3 +10,7 @@ you need ruby on your system
 install the needed gems with ```bundle install```
 
 the default theme is not the best design work but you might get the idea
+
+to start the app use ```bash --login -c "path/to/wpchange.rb &! exit"```
+or use ```bash --login -c "path/to/wpchange.rb"``` command to autostart (i.e. with ubuntu startup applications)
+
